@@ -1,5 +1,5 @@
 <!--
-  GitHub Profile README for: ksjxixi-gjf
+  GitHub Profile README for: ksjxixi-gif
   Modern / cinematic / dynamic, while staying readable.
 -->
 
@@ -13,7 +13,7 @@
 <a href="mailto:ksjxixi@gmail.com">
   <img src="https://img.shields.io/badge/EMAIL-111827?style=for-the-badge&logo=gmail&logoColor=white" />
 </a>
-<a href="https://github.com/ksjxixi-gjf">
+<a href="https://github.com/ksjxixi-gif">
   <img src="https://img.shields.io/badge/GITHUB-111827?style=for-the-badge&logo=github&logoColor=white" />
 </a>
 
@@ -135,29 +135,23 @@ Tools
 
 Engineering mode
 
-flowchart LR
-    A[Understand the system] --> B[Map constraints]
-    B --> C[Design the boundary]
-    C --> D[Build]
-    D --> E[Break it]
-    E --> F[Fix it]
-    F --> G[Ship]
-    G --> H[Observe]
-    H --> A
+<div align="center">
+
+UNDERSTAND　→　MAP　→　DESIGN　→　BUILD　→　BREAK　→　FIX　→　SHIP　→　OBSERVE
+
+<sub>then do it again, with fewer surprises.</sub>
+
+</div>
 
 GitHub telemetry
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=ksjxixi-gjf&show_icons=true&hide_border=true&rank_icon=github&include_all_commits=true&theme=transparent&title_color=8B5CF6&icon_color=8B5CF6&text_color=9CA3AF" />
+<img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=ksjxixi-gif&bg_color=00000000&color=8B5CF6&line=8B5CF6&point=E5E7EB&area=true&hide_border=true" alt="GitHub activity graph" />
 
-<img height="170" src="https://streak-stats.demolab.com?user=ksjxixi-gjf&theme=transparent&hide_border=true&ring=8B5CF6&fire=8B5CF6&currStreakLabel=8B5CF6&sideLabels=9CA3AF&dates=6B7280&currStreakNum=E5E7EB&sideNums=E5E7EB" />
+<br/>
 
-</div>
-
-<div align="center">
-
-<img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=ksjxixi-gjf&bg_color=00000000&color=8B5CF6&line=8B5CF6&point=E5E7EB&area=true&hide_border=true" />
+<img src="https://komarev.com/ghpvc/?username=ksjxixi-gif&style=for-the-badge&color=5a2fd6&label=PROFILE+VIEWS" alt="Profile views" />
 
 </div>
 
@@ -176,8 +170,6 @@ Arabic — Native · English — C2 · French — B1 · Spanish — B1
 <div align="center">
 
 Build systems. Understand everything.
-
-<img src="https://komarev.com/ghpvc/?username=ksjxixi-gjf&style=for-the-badge&color=5a2fd6&label=PROFILE+VIEWS" />
 
 <br/><br/>
 
