@@ -1,246 +1,186 @@
+<!--
+  GitHub Profile README for: ksjxixi-gjf
+  Modern / cinematic / dynamic, while staying readable.
+-->
+
 <div align="center">
 
-# MOHAMMAD ABUKHADIJA
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=240&color=0:050816,35:0b1026,70:1b1245,100:5a2fd6&text=MOHAMMAD%20ABUKHADIJA&fontColor=ffffff&fontSize=42&fontAlignY=38&desc=I%20build%20systems%20that%20have%20to%20survive%20outside%20localhost.&descAlignY=59&descSize=16&animation=fadeIn" />
 
-### I build systems.
+<a href="https://mohammad-s-digital-presence.vercel.app/">
+  <img src="https://img.shields.io/badge/PORTFOLIO-111827?style=for-the-badge&logo=vercel&logoColor=white" />
+</a>
+<a href="mailto:ksjxixi@gmail.com">
+  <img src="https://img.shields.io/badge/EMAIL-111827?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
+<a href="https://github.com/ksjxixi-gjf">
+  <img src="https://img.shields.io/badge/GITHUB-111827?style=for-the-badge&logo=github&logoColor=white" />
+</a>
 
-**Software Engineering · SaaS · AI · Infrastructure · Product**
+<br/><br/>
 
-<br>
-
-[Portfolio](https://mohammad-s-digital-presence.vercel.app) ·
-[GitHub](https://github.com/ksjxixi-gjf) ·
-[Email](mailto:ksjxixi@gmail.com)
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=900&color=8B5CF6&center=true&vCenter=true&width=900&lines=Software+Engineer+%E2%80%A2+Backend+%E2%80%A2+Full-Stack;SaaS+%E2%80%A2+AI+%E2%80%A2+Infrastructure+%E2%80%A2+Security;ASP.NET+Core+%E2%80%A2+React+%E2%80%A2+PostgreSQL+%E2%80%A2+Docker;I+like+boring+systems+with+serious+engineering." alt="Typing SVG" />
 
 </div>
 
----
+whoami
 
-## About
+Mohammad Abukhadija
 
-I’m a backend-focused software engineer and product builder from Jordan.
+Software engineer focused on backend systems, SaaS architecture,
+AI-integrated products, infrastructure, and production engineering.
 
-I work across the entire stack when the product needs it — from architecture, APIs, databases and authentication to frontend, AI workflows, deployment and infrastructure.
-
-I’m most interested in systems that have real users, real constraints, real data, and real consequences when something breaks.
-
-> **Build things that deserve to exist.**
-
----
-
-## What I build
+I like understanding the whole machine:
+product → frontend → API → data → auth → infra → deployment → operations.
 
 <table>
 <tr>
 <td width="33%" valign="top">
 
-### SYSTEMS
+SYSTEMS
 
-Multi-tenant SaaS  
-APIs & backend architecture  
-Authentication & IAM  
-RBAC & permissions  
-Realtime workflows  
-Background processing  
-Search & retrieval  
-Data architecture
+Multi-tenant SaaS
 
-</td>
-<td width="33%" valign="top">
+IAM / RBAC
 
-### INTELLIGENCE
+APIs & integrations
 
-RAG pipelines  
-OCR workflows  
-AI assistants  
-Context & memory  
-Semantic search  
-Structured outputs  
-Automation  
-Tool-integrated AI
+Realtime workflows
+
+Background processing
+
+Domain-heavy platforms
 
 </td>
 <td width="33%" valign="top">
 
-### INFRASTRUCTURE
+INTELLIGENCE
 
-Linux servers  
-Docker  
-Nginx  
-PostgreSQL  
-Object storage  
-CI/CD  
-Production debugging  
-Deployment architecture
+RAG & retrieval
+
+OCR pipelines
+
+Agent orchestration
+
+AI-assisted workflows
+
+Structured outputs
+
+Context & memory systems
+
+</td>
+<td width="33%" valign="top">
+
+INFRASTRUCTURE
+
+Linux VPS
+
+Docker
+
+Nginx
+
+PostgreSQL
+
+Object storage
+
+CI/CD & production ops
 
 </td>
 </tr>
 </table>
 
----
+Selected work
 
-# Selected Work
+⚖️ Nibras LegalTech
 
-## Nibras LegalTech
+Arabic-first legal operations platform built as a serious production SaaS.
 
-**A multi-tenant legal operations platform built for real legal workflows.**
+Role: Project Manager / Lead Software Engineer
 
-Nibras brings case management, documents, tasks, sessions, users, permissions, AI workflows, notifications and organizational structure into one platform.
+ASP.NET Core 8 EF Core React TypeScript PostgreSQL SignalR Hangfire JWT pgvector Docker Nginx
 
-**My role:** Project Manager / Lead Software Engineer
+Built across:
 
-**I work across:**
-- ASP.NET Core 8 Web API
-- React + TypeScript
-- PostgreSQL + EF Core
-- JWT + refresh-token authentication
-- Multi-tenancy
-- IAM / RBAC
-- Fine-grained permissions
-- SignalR realtime features
-- Background jobs
-- AI-assisted workflows
-- OCR
-- RAG / semantic retrieval
-- Docker
-- Nginx
-- Linux infrastructure
-- Production stabilization
+multi-tenancy and tenant isolation
 
-> The interesting part is not building a feature.  
-> It is building the system around it so the feature remains secure, maintainable and useful after launch.
+IAM / granular RBAC and plan-aware access
 
-<!--
-Add a real screenshot here:
-![Nibras](./assets/nibras.png)
--->
+cases, clients, documents, tasks, sessions and legal workflows
 
----
+realtime features and background jobs
 
-## Banking AI Assistant
+AI-assisted legal workflows, OCR and retrieval
 
-A full-stack banking experience combining a modern web interface with AI-assisted interaction and voice-enabled workflows.
+Linux infrastructure, deployment and production operations
 
-**Focus:** product engineering, AI interaction, backend integration, frontend systems.
+legacy workflow modernization and migration into server-enforced architecture
 
-<!--
-![Banking AI Assistant](./assets/banking-ai.png)
--->
-
----
-
-## Pharmacy Administration System
-
-A business administration platform covering products, orders, customers, categories, discounts, delivery, analytics and operational workflows.
-
-**Focus:** full-stack engineering, admin systems, databases, business logic.
-
-<!--
-![Pharmacy Admin](./assets/pharmacy-admin.png)
--->
-
----
-
-## Nova Scotia Towing
-
-A production website for a Canadian towing business, designed around local discovery, conversion and real-world deployment.
-
-**Focus:** production web, SEO, conversion, deployment.
-
-<!--
-![Nova Scotia Towing](./assets/towing.png)
--->
-
----
-
-# How I think
-
-I care more about understanding the system than memorizing a framework.
-
-```text
-Understand the problem
-        ↓
-Model the system
-        ↓
-Find the failure modes
-        ↓
-Design the architecture
-        ↓
-Build the smallest correct version
-        ↓
-Measure
-        ↓
-Refactor
-        ↓
-Ship
-```
-
-I want to know what happens when:
-
-- two users hit the same resource at once
-- a token expires mid-request
-- the database becomes slow
-- a background job fails
-- a tenant boundary is crossed
-- an AI provider goes down
-- a request is retried
-- a deployment partially succeeds
-- real users do something nobody expected
-
-That is where software engineering gets interesting.
-
----
-
-# Stack
-
-### Backend
-`C#` `ASP.NET Core` `EF Core` `Node.js` `Express` `Python` `FastAPI` `Django` `PHP` `Laravel`
-
-### Frontend
-`React` `TypeScript` `Vite` `Next.js` `Tailwind CSS` `shadcn/ui` `HTML` `CSS`
-
-### Data
-`PostgreSQL` `pgvector` `Redis` `SQL Server` `MySQL` `MongoDB`
-
-### Infrastructure
-`Linux` `Docker` `Nginx` `Git` `GitHub` `Cloudflare` `Vercel`
-
-### Engineering
-`Multi-tenant SaaS` `IAM` `RBAC` `REST APIs` `Realtime` `RAG` `OCR` `System Design` `Production Debugging`
-
----
-
-# Current Focus
-
-**Building production software that combines:**
-
-`SaaS architecture`  
-`AI-native workflows`  
-`legal technology`  
-`automation`  
-`infrastructure`  
-`security`  
-`developer tooling`
-
----
-
-# Languages
-
-**Arabic** — Native  
-**English** — C2  
-**French** — B1  
-**Spanish** — B1
-
----
+Stack
 
 <div align="center">
 
-## Software · Systems · Product
+Core
 
-**Jordan**
+<img src="https://skillicons.dev/icons?i=cs,dotnet,react,ts,js,nodejs,python,php,laravel&perline=9" />
 
-[Portfolio](https://mohammad-s-digital-presence.vercel.app) ·
-[Email](mailto:ksjxixi@gmail.com) ·
-[GitHub](https://github.com/ksjxixi-gjf)
+Data & infrastructure
+
+<img src="https://skillicons.dev/icons?i=postgres,redis,mysql,mongodb,docker,linux,nginx,cloudflare,git,github&perline=10" />
+
+Tools
+
+<img src="https://skillicons.dev/icons?i=vscode,visualstudio,postman,figma&perline=8" />
+
+</div>
+
+Engineering mode
+
+flowchart LR
+    A[Understand the system] --> B[Map constraints]
+    B --> C[Design the boundary]
+    C --> D[Build]
+    D --> E[Break it]
+    E --> F[Fix it]
+    F --> G[Ship]
+    G --> H[Observe]
+    H --> A
+
+GitHub telemetry
+
+<div align="center">
+
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=ksjxixi-gjf&show_icons=true&hide_border=true&rank_icon=github&include_all_commits=true&theme=transparent&title_color=8B5CF6&icon_color=8B5CF6&text_color=9CA3AF" />
+
+<img height="170" src="https://streak-stats.demolab.com?user=ksjxixi-gjf&theme=transparent&hide_border=true&ring=8B5CF6&fire=8B5CF6&currStreakLabel=8B5CF6&sideLabels=9CA3AF&dates=6B7280&currStreakNum=E5E7EB&sideNums=E5E7EB" />
+
+</div>
+
+<div align="center">
+
+<img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=ksjxixi-gjf&bg_color=00000000&color=8B5CF6&line=8B5CF6&point=E5E7EB&area=true&hide_border=true" />
+
+</div>
+
+Current focus
+
+01  Production SaaS architecture
+02  Authorization and identity systems
+03  AI-agent orchestration for software engineering
+04  Legal-tech infrastructure and workflows
+05  Building software with boring reliability
+
+Languages
+
+Arabic — Native · English — C2 · French — B1 · Spanish — B1
+
+<div align="center">
+
+Build systems. Understand everything.
+
+<img src="https://komarev.com/ghpvc/?username=ksjxixi-gjf&style=for-the-badge&color=5a2fd6&label=PROFILE+VIEWS" />
+
+<br/><br/>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:5a2fd6,35:1b1245,70:0b1026,100:050816" />
 
 </div>
