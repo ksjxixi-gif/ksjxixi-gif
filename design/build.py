@@ -69,7 +69,8 @@ def text_width(key: str, s: str, size: float, ls: float = 0.0) -> float:
 
 
 def font_face(key: str, chars: set[str]) -> str:
-    font = TTFont(FONT_DIR / FONTS[key][0])
+    # recalcTimestamp=False keeps rebuilds byte-identical, so unchanged SVGs don't show up in diffs.
+    font = TTFont(FONT_DIR / FONTS[key][0], recalcTimestamp=False)
     opts = subset.Options()
     opts.layout_features = ["*"]  # keeps Arabic joining forms and kerning
     opts.name_IDs = ["*"]  # keeps the copyright and licence records
@@ -339,8 +340,7 @@ SECTIONS = [
     ("04", "ENGINEERING PHILOSOPHY", "04-philosophy"),
     ("05", "TECHNOLOGY", "05-technology"),
     ("06", "CURRENT FOCUS", "06-current-focus"),
-    ("07", "ON GITHUB", "07-github"),
-    ("08", "HOW I THINK", "08-how-i-think"),
+    ("07", "HOW I THINK", "07-how-i-think"),
 ]
 
 
