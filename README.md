@@ -163,13 +163,7 @@ I'm the **Project Manager / Lead Software Engineer**, and it's where most of my 
 
 <br />
 
-<img src="assets/sections/07-github.svg" width="100%" alt="07 · On GitHub" />
-
-<img src="assets/stats.svg" width="100%" alt="GitHub stats for the last 12 months, covering public and private repos: contributions, commits, pull requests, code reviews, repositories, stars, top languages by code size, and contributions per week. Refreshed daily." />
-
-<br />
-
-<img src="assets/sections/08-how-i-think.svg" width="100%" alt="08 · How I Think" />
+<img src="assets/sections/07-how-i-think.svg" width="100%" alt="07 · How I Think" />
 
 I enjoy understanding systems at the level where the abstraction stops being useful.
 
