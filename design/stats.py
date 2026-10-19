@@ -2,9 +2,10 @@
 """Render assets/stats.svg from live GitHub data, in the same Art Deco style.
 
 Runs daily in .github/workflows/stats.yml. To include private repos it needs a
-personal access token saved as the STATS_TOKEN repository secret; without one it
-falls back to the workflow's own token, which only sees public work (the card
-then says so).
+classic personal access token with the `repo` and `read:user` scopes, saved as
+the STATS_TOKEN repository secret. Without one (or with a token that can't read
+private repos) only public work is counted, and the card says "public repos only".
+The workflow log prints what the token could see.
 
 Local run:
     STATS_TOKEN=ghp_... python3 design/stats.py
@@ -29,11 +30,13 @@ EXCLUDE_LANGUAGES: set[str] = set()
 
 ACTIVITY = """
 query($login: String!) {
+  viewer { login }
   user(login: $login) {
     contributionsCollection {
       totalCommitContributions
       totalPullRequestContributions
       totalPullRequestReviewContributions
+      restrictedContributionsCount
       contributionCalendar { totalContributions weeks { contributionDays { contributionCount } } }
     }
   }
@@ -46,6 +49,7 @@ query($login: String!, $after: String, $affiliations: [RepositoryAffiliation]) {
       pageInfo { hasNextPage endCursor }
       nodes {
         owner { login }
+        isPrivate
         stargazerCount
         languages(first: 25) { edges { size node { name } } }
       }
@@ -53,8 +57,11 @@ query($login: String!, $after: String, $affiliations: [RepositoryAffiliation]) {
   }
 }"""
 
+_token_scopes: str | None = None  # classic tokens report their scopes in a response header
+
 
 def gql(token: str, query: str, **variables) -> dict:
+    global _token_scopes
     req = urllib.request.Request(
         "https://api.github.com/graphql",
         data=json.dumps({"query": query, "variables": variables}).encode(),
@@ -62,26 +69,31 @@ def gql(token: str, query: str, **variables) -> dict:
                  "User-Agent": f"{LOGIN}-profile-stats"},
     )
     with urllib.request.urlopen(req, timeout=60) as resp:
+        _token_scopes = resp.headers.get("X-OAuth-Scopes", _token_scopes)
         body = json.load(resp)
     if body.get("errors"):
         raise SystemExit(f"GitHub API error: {body['errors']}")
     return body["data"]
 
 
-def fetch(token: str, private: bool) -> dict:
-    activity = gql(token, ACTIVITY, login=LOGIN)["user"]["contributionsCollection"]
+def fetch(token: str, personal: bool) -> dict:
+    """`personal` means a STATS_TOKEN was supplied, so org and collaborator repos are worth asking for."""
+    result = gql(token, ACTIVITY, login=LOGIN)
+    viewer = result["viewer"]["login"]
+    activity = result["user"]["contributionsCollection"]
     weeks = [sum(d["contributionCount"] for d in w["contributionDays"])
              for w in activity["contributionCalendar"]["weeks"]][-WEEKS:]
 
     # Org and collaborator repos count toward languages (that's where team work lives);
     # only repos the user owns count toward repositories and stars.
-    affiliations = ["OWNER", "ORGANIZATION_MEMBER", "COLLABORATOR"] if private else ["OWNER"]
-    owned = stars = 0
+    affiliations = ["OWNER", "ORGANIZATION_MEMBER", "COLLABORATOR"] if personal else ["OWNER"]
+    owned = stars = private_seen = 0
     sizes: Counter[str] = Counter()
     after = None
     while True:
         page = gql(token, REPOS, login=LOGIN, after=after, affiliations=affiliations)["user"]["repositories"]
         for repo in page["nodes"]:
+            private_seen += repo["isPrivate"]
             if repo["owner"]["login"].lower() == LOGIN.lower():
                 owned += 1
                 stars += repo["stargazerCount"]
@@ -92,9 +104,20 @@ def fetch(token: str, private: bool) -> dict:
             break
         after = page["pageInfo"]["endCursor"]
 
+    hidden = activity["restrictedContributionsCount"]
+    print(f"Token belongs to: {viewer}")
+    print(f"Token scopes: {_token_scopes if _token_scopes is not None else 'n/a (fine-grained or app token)'}")
+    print(f"Repos seen: {owned} owned (non-fork), {private_seen} private; "
+          f"contributions hidden from this token: {hidden}")
+    if personal and viewer.lower() != LOGIN.lower():
+        print(f"::warning::STATS_TOKEN belongs to {viewer}, not {LOGIN}. Create it from the {LOGIN} account.")
+    if hidden:
+        print(f"::warning::{hidden} private contributions are hidden because the token can't read private repos. "
+              "Use a classic token with the 'repo' and 'read:user' scopes, then re-run this workflow.")
+
     total = sum(sizes.values()) or 1
     return {
-        "private": private,
+        "private": private_seen > 0,
         "contributions": activity["contributionCalendar"]["totalContributions"],
         "commits": activity["totalCommitContributions"],
         "pull_requests": activity["totalPullRequestContributions"],
@@ -199,14 +222,14 @@ def main() -> None:
         render(None).save("stats.svg")
         return
     token = os.environ.get("STATS_TOKEN")
-    private = bool(token)
+    personal = bool(token)
     if not token:
         token = os.environ.get("GITHUB_TOKEN")
         print("::warning::STATS_TOKEN is not set, so the card only covers public repos. "
               "Add a personal access token as the STATS_TOKEN repository secret to include private work.")
     if not token:
         raise SystemExit("Set STATS_TOKEN (or GITHUB_TOKEN) to call the GitHub API.")
-    render(fetch(token, private)).save("stats.svg")
+    render(fetch(token, personal)).save("stats.svg")
 
 
 if __name__ == "__main__":
