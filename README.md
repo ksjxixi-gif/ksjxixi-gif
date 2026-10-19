@@ -165,14 +165,7 @@ I'm the **Project Manager / Lead Software Engineer**, and it's where most of my 
 
 <img src="assets/sections/07-github.svg" width="100%" alt="07 · On GitHub" />
 
-<div align="center">
-
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=ksjxixi-gif&bg_color=070B18&color=F4D07A&line=D4AF37&point=F7E7B2&area=true&area_color=D4AF37&title_color=F4D07A&hide_border=true&radius=14&custom_title=Contribution%20Activity" alt="Contribution activity graph" />
-
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=ksjxixi-gif&show_icons=true&hide_border=true&border_radius=14&bg_color=070B18&title_color=F4D07A&text_color=E9DCC2&icon_color=D4AF37&ring_color=D4AF37&rank_icon=github" alt="GitHub stats" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ksjxixi-gif&layout=compact&hide_border=true&border_radius=14&bg_color=070B18&title_color=F4D07A&text_color=E9DCC2" alt="Most used languages" />
-
-</div>
+<img src="assets/stats.svg" width="100%" alt="GitHub stats for the last 12 months, covering public and private repos: contributions, commits, pull requests, code reviews, repositories, stars, top languages by code size, and contributions per week. Refreshed daily." />
 
 <br />
 
